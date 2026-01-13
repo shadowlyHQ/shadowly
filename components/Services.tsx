@@ -42,7 +42,7 @@ export default function Services() {
   const services = [
     {
       title: 'Platform Monetization Strategy',
-      description: 'I help creators develop comprehensive monetization strategies tailored to their unique platform and audience. From identifying revenue streams to optimizing conversion funnels.',
+      description: 'We help creators develop comprehensive monetization strategies tailored to their unique platform and audience. From identifying revenue streams to optimizing conversion funnels.',
       icon: icons.strategy,
       gradient: 'from-purple-500 to-pink-500',
     },
@@ -113,10 +113,10 @@ export default function Services() {
             Services
           </motion.span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            What I Offer
+            What We Offer
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            From initial strategy to ongoing optimization, I'm with you every step of the way transforming your creator platform into a profitable business.
+            From initial strategy to ongoing optimization, we're with you every step of the way transforming your creator platform into a profitable business.
           </p>
         </motion.div>
 
