@@ -78,7 +78,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
-              About Me
+              About Us
             </motion.span>
 
             <motion.h2 
@@ -96,7 +96,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              I'm a Shadow operator. I work behind the scenes to help creators build and monetize their platforms. While you focus on creating amazing content, I handle the business side of things.
+              We're Shadow operators. We work behind the scenes to help creators build and monetize their platforms. While you focus on creating amazing content, we handle the business side of things.
             </motion.p>
 
             <motion.p 
@@ -105,7 +105,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              My mission is simple: help micro-creators and creators turn their passion into sustainable income. Whether you're just starting out or looking to scale, I provide the strategic guidance you need.
+              Our mission is simple: help micro-creators and creators turn their passion into sustainable income. Whether you're just starting out or looking to scale, we provide the strategic guidance you need.
             </motion.p>
 
             <motion.div

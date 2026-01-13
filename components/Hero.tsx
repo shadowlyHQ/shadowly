@@ -77,7 +77,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              I help micro-creators and creators monetize their platforms and turn their passion into profit.
+              We help micro-creators and creators monetize their platforms and turn their passion into profit.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
