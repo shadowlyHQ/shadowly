@@ -54,7 +54,7 @@ export default function Services() {
     },
     {
       title: 'Creator Business Growth',
-      description: 'Strategic guidance on scaling your creator business, building sustainable income, and creating systems that allow you to focus on what you do best—creating.',
+      description: 'Strategic guidance on scaling your creator business, building sustainable income, and creating systems that allow you to focus on what you do best: creating.',
       icon: icons.growth,
       gradient: 'from-green-500 to-teal-500',
     },

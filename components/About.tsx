@@ -96,7 +96,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              I'm a Shadow operator—someone who works behind the scenes to help creators build and monetize their platforms. While you focus on creating amazing content, I handle the business side of things.
+              I'm a Shadow operator. I work behind the scenes to help creators build and monetize their platforms. While you focus on creating amazing content, I handle the business side of things.
             </motion.p>
 
             <motion.p 
