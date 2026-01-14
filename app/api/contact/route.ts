@@ -7,8 +7,18 @@ const WEBSITE_URL = 'https://shadowly.io'
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if API key exists
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.error('RESEND_API_KEY is not set')
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      )
+    }
+    
     // Initialize Resend inside the function (runtime, not build time)
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    const resend = new Resend(apiKey)
     
     const { name, email, message } = await request.json()
 
