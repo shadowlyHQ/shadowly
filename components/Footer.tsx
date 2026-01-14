@@ -8,6 +8,22 @@ export default function Footer() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-50px" })
 
+  const handleBookCallClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const bookCallSection = document.getElementById('book-call')
+    if (bookCallSection) {
+      // Account for fixed navbar height
+      const navbarHeight = 80
+      const elementPosition = bookCallSection.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - navbarHeight
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   const links = [
     { href: '#services', label: 'Services' },
     { href: '#about', label: 'About' },
@@ -58,7 +74,8 @@ export default function Footer() {
           </p>
           <motion.a
             href="#book-call"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-light to-purple-lighter text-white px-8 py-4 rounded-full font-medium"
+            onClick={handleBookCallClick}
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-light to-purple-lighter text-white px-8 py-4 rounded-full font-medium cursor-pointer"
             whileHover={{ scale: 1.05, boxShadow: "0 20px 40px -15px rgba(139, 92, 246, 0.5)" }}
             whileTap={{ scale: 0.95 }}
           >
@@ -124,6 +141,7 @@ export default function Footer() {
                 >
                   <Link 
                     href={link.href} 
+                    onClick={link.href === '#book-call' ? handleBookCallClick : undefined}
                     className="text-white/50 hover:text-white transition-colors inline-flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-light/50 group-hover:bg-purple-lighter transition-colors" />
