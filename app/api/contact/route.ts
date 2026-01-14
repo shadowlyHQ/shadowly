@@ -1,14 +1,15 @@
 import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 // Logo URL - update this to your deployed site
 const LOGO_URL = 'https://shadowly.io/shadowly.png'
 const WEBSITE_URL = 'https://shadowly.io'
 
 export async function POST(request: NextRequest) {
   try {
+    // Initialize Resend inside the function (runtime, not build time)
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    
     const { name, email, message } = await request.json()
 
     // Validate required fields
